@@ -1,0 +1,24 @@
+$breakpoints: (
+	'xxl': (max-width: 1680px),
+	'xl': (max-width: 1400px),
+	'l': (max-width: 1024px),
+	'm': (max-width: 768px),
+	's': (max-width: 680px),
+	'xs': (max-width: 480px),
+	'xxs': (max-width: 375px),
+);
+
+$font: 'Geometria', 'Helvetica Neue', Arial, sans-serif;
+
+$container_width: 1200px;
+
+$pad-xxl: 80px;
+$pad-xl: 60px;
+$pad-l: 50px;
+$pad-m: 40px;
+$pad-s: 30px;
+$pad-xs: 20px;
+$pad-xxs: 10px;
+
+$gutter: 20px;
+$gutter-mobile: 16px;
