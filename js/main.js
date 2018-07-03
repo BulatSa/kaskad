@@ -178,3 +178,51 @@ $(function($){
 /***********************
 Burger END
 ***********************/
+
+
+/***********************
+Head Wall BEGIN
+***********************/
+$(function($){
+	var randomImgIndx = [];
+	var imgLength = $('.head-wall__img').length;
+	var imgActiveCol = 6;
+
+	function randomInteger(min, max) {
+		var rand = min + Math.random() * (max + 1 - min);
+		rand = Math.floor(rand);
+		return rand;
+	}
+
+	// Set massiv with random numbers
+	function randomWallImg(mass,imgActiveCol,maxImgLength){
+		for (i=0; i < imgActiveCol; i++) {
+			mass.push(randomInteger(1, maxImgLength));
+		}
+	}
+
+	function randomActiveImg(){
+		$('.head-wall__img').removeClass('active');
+		randomWallImg(randomImgIndx,imgActiveCol,imgLength);
+
+		$('.head-wall__img').each(function (indx, el) {
+			for(i=0; i < imgActiveCol;i++) {
+				if(indx == randomImgIndx[i]) {
+					$(el).addClass('active');
+				}
+			}
+		});
+	}
+
+	randomActiveImg();
+
+	setInterval(function () {
+		randomActiveImg();
+		randomImgIndx.length = 0;
+	},2000);
+
+
+});
+/***********************
+Head Wall END
+***********************/

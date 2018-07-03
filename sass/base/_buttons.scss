@@ -32,16 +32,21 @@
 	&:focus{
 		outline: none;
 	}
-
+	&--white {
+		color: #000;
+		text-shadow: 0 1px 0 #fff;
+		box-shadow: 0 2px 0 0 #e1e1e1;
+		background: linear-gradient(to bottom, #ffffff, #f6f9fe);
+	}
 	&--flat {}
 	&--mini {
-		padding: 15px 25px;
+		padding: 12px 25px;
+		font-size: 14px;
 		@include res(l) {
 			padding: 12px 20px;
 		}
 		@include res(s) {
 			padding: 10px 19px;
-			font-size: 14px;
 		}
 	}
 }

@@ -1,26 +1,227 @@
 .big-head-sec {
-	background: transparentize(#000,0.5);
+	background: linear-gradient(to bottom, transparentize(#000,0.8) 0%, transparentize(#000,1) 20%, transparentize(#000,1) 80%,transparentize(#000,0.8) 100%);
 }
 
 .big-head {
 	min-height: 100vh;
+	//min-height: 668px;
 	padding-top: 45px;
+	padding-bottom: $pad-s;
+	color: #fff;
+	@include res(xl) {
+		padding-top: 35px;
+	}
 }
 
-.big-head__top {}
+.big-head__top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: $pad-m;
+	@include res(l) {
+		padding-top: $pad-s;
+	}
+	@include res(s) {
+		flex-direction: column;
+	}
+}
 
-.big-head__logo {}
+.big-head__logo {
+	display: flex;
+	align-items: center;
+	img {
+		@include res(xl) {
+			max-height: 65px;
+			transform: translate3d(0,0,0);
+		}
+		@include res(l) {
+			max-height: 60px;
+		}
+		@include res(s) {
+			max-height: 50px;
+		}
+	}
+	span {
+		margin-left: $pad-xs;
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		@include res(xs) {
+			font-size: 12px;
+		}
+	}
+}
 
-.big-head__callback {}
+.big-head__callback {
+	display: flex;
+	align-items: center;
+	@include res(s) {
+		margin-top: $pad-xs;
+	}
+	img {
+		display: block;
+		margin-right: $pad-xs;
+		@include res(xl) {
+			max-height: 70px;
+			transform: translate3d(0,0,0);
+		}
+		@include res(l) {
+			max-height: 65px;
+		}
+	}
+}
 
-.big-head__title {}
+.big-head__title {
+	max-width: 900px;
+	padding-top: $pad-xl;
+	@include res(l) {
+		padding-top: $pad-l;
+	}
+	@include res(s) {
+		padding-top: $pad-s;
+	}
+}
 
-.big-head__benefits {}
+.big-head__benefits {
+	display: flex;
+	align-items: flex-end;
+	padding-top: $pad-l;
+	@include res(m) {
+		flex-wrap: wrap;
+	}
+	@include res(s) {
+		align-items: flex-start;
+		padding-top: $pad-s;
+	}
+}
 
-.big-head__benefit {}
+.big-head__benefit {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	padding-right: $pad-s;
+	padding-left: $pad-xs;
+	@include res(m) {
+		margin-bottom: $pad-s;
+	}
+	@include res(s) {
+		width: 50%;
+		padding-left: 0;
+		padding-right: 15px;
+		margin-bottom: $pad-xs;
+	}
+	&:first-child {
+		margin-left: -$pad-s;
+		@include res(l) {
+			margin-left: 0;
+		}
+	}
+	&:last-child {
+		padding-right: 0;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		z-index: 0;
+		@include res(s) {
+			content: none;
+		}
+	}
+	img {
+		position: relative;
+		z-index: 1;
+		@include res(xl) {
+			max-height: 120px;
+			transform: translate3d(0,0,0);
+		}
+		@include res(s) {
+			display: none;
+		}
+	}
+	span {
+		position: relative;
+		display: block;
+		max-width: 180px;
+		padding-bottom: $pad-xs;
+		padding-left: $pad-xs;
+		font-size: 16px;
+		z-index: 1;
+		@include res(l) {
+			font-size: 15px;
+		}
+		@include res(s) {
+			padding-bottom: 0;
+			padding-left: 0;
+			font-size: 14px;
+		}
+		b {
+			display: block;
+		}
+	}
+	&--red {
+		&:before {
+			background: radial-gradient(ellipse at center, transparentize(#ff4835, 0.5) 0%, transparentize(#ff4835, 1) 70%);
+		}
+	}
+	&--green {
+		&:before {
+			background: radial-gradient(ellipse at center, transparentize(#00ead6, 0.5) 0%, transparentize(#00ead6, 1) 70%);
+		}
+	}
+	&--blue {
+		&:before {
+			background: radial-gradient(ellipse at center, transparentize(#98dbe5, 0.5) 0%, transparentize(#98dbe5, 1) 70%);
+		}
+	}
+}
 
-.big-head__contact {}
+.big-head__contact {
+	padding-top: $pad-l;
+	@include res(m) {
+		padding-top: $pad-s;
+	}
+	@include res(s) {
+		padding-top: $pad-xxs;
+	}
+}
 
-.big-head__contact-title {}
+.big-head__contact-title {
+	max-width: 460px;
+	font-size: 26px;
+	@include res(xl) {
+		font-size: 24px;
+	}
+	@include res(s) {
+		font-size: 18px;
+		text-align: center;
+	}
+	span {
+		font-weight: bold;
+	}
+}
 
-.big-head__contact-btns {}
+.big-head__contact-btns {
+	display: flex;
+	align-items: center;
+	padding-top: $pad-s;
+	@include res(s) {
+		flex-direction: column;
+		padding-top: $pad-xs;
+	}
+	img {
+		display: block;
+		max-width: 286px;
+		width: 100%;
+		margin-left: $pad-xl;
+		transform: translate3d(0,0,0);
+		@include res(s) {
+			margin-top: $pad-s;
+			margin-left: 0;
+		}
+	}
+}

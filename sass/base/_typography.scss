@@ -14,14 +14,29 @@ a {
 h1 {
 	font-size: 55px;
 	line-height: (72/55);
+	@include res(xl) {
+		font-size: 46px;
+	}
+	@include res(l) {
+		font-size: 38px;
+	}
+	@include res(s) {
+		font-size: 24px;
+	}
 }
 
 h2 {
 	font-size: 48px;
 	line-height: 1.2;
+	@include res(xl) {
+		font-size: 38px;
+	}
 }
 
 h3 {
 	font-size: 24px;
 	line-height: 1.2;
+	@include res(xl) {
+		font-size: 22px;
+	}
 }

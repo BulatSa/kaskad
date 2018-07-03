@@ -4,7 +4,7 @@
 	left: 0;
 	right: 0;
 	background: #fff;
-	z-index: 5;
+	z-index: 11;
 }
 
 .top-menu {
@@ -147,6 +147,7 @@
 		opacity: 0;
 		transform: translate3d(-280px,0,0);
 		transition: transform 0.3s ease, opacity 0.2s ease;
+		z-index: 10;
 	}
 	&:after {
 		content: '';
