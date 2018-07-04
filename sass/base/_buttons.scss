@@ -38,7 +38,19 @@
 		box-shadow: 0 2px 0 0 #e1e1e1;
 		background: linear-gradient(to bottom, #ffffff, #f6f9fe);
 	}
-	&--flat {}
+	&--flat {
+		padding: 10px 30px;
+		font-size: 16px;
+		box-shadow: none;
+		background: #009cff;
+		@include res(l) {
+			padding: 10px 25px;
+			font-size: 14px;
+		}
+		@include res(s) {
+			padding: 10px 20px;
+		}
+	}
 	&--mini {
 		padding: 12px 25px;
 		font-size: 14px;

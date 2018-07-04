@@ -6,7 +6,7 @@
 	min-height: 100vh;
 	//min-height: 668px;
 	padding-top: 45px;
-	padding-bottom: $pad-s;
+	padding-bottom: 200px;
 	color: #fff;
 	@include res(xl) {
 		padding-top: 35px;
@@ -165,17 +165,17 @@
 	}
 	&--red {
 		&:before {
-			background: radial-gradient(ellipse at center, transparentize(#ff4835, 0.5) 0%, transparentize(#ff4835, 1) 70%);
+			background: radial-gradient(ellipse at center, transparentize(#ff4835, 0) 0%, transparentize(#ff4835, 1) 70%);
 		}
 	}
 	&--green {
 		&:before {
-			background: radial-gradient(ellipse at center, transparentize(#00ead6, 0.5) 0%, transparentize(#00ead6, 1) 70%);
+			background: radial-gradient(ellipse at center, transparentize(#00ead6, 0) 0%, transparentize(#00ead6, 1) 70%);
 		}
 	}
 	&--blue {
 		&:before {
-			background: radial-gradient(ellipse at center, transparentize(#98dbe5, 0.5) 0%, transparentize(#98dbe5, 1) 70%);
+			background: radial-gradient(ellipse at center, transparentize(#98dbe5, 0) 0%, transparentize(#98dbe5, 1) 70%);
 		}
 	}
 }

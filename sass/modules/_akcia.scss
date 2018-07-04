@@ -1,0 +1,24 @@
+.akcia-sec {
+	background: #fff;
+}
+
+.akcia {}
+
+.akcia__list {
+	padding-top: $pad-xs;
+	@include res(s) {
+		padding-top: $pad-xxs;
+	}
+}
+
+.akcia__item {
+	margin-bottom: $pad-xs;
+	overflow: hidden;
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		border-radius: 10px;
+		transform: translate3d(0,0,0);
+	}
+}

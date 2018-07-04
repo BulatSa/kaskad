@@ -1,0 +1,145 @@
+.cases-sec {
+	background: #fff;
+}
+
+.cases {}
+
+.cases-waves {
+	position: absolute;
+	top: -160px;
+	right: 0;
+}
+
+.cases__top {
+	position: relative;
+	padding-top: $pad-xxl;
+	@include res(m) {
+		padding-top: $pad-m;
+	}
+	@include res(s) {
+		padding-top: $pad-xs;
+	}
+	img {
+		position: absolute;
+		top: -200px;
+		right: 40px;
+		@include res(l) {
+			max-width: 350px;
+			top: -120px;
+		}
+		@include res(m) {
+			display: none;
+		}
+	}
+}
+
+.cases__info {
+	max-width: 580px;
+	min-height: 380px;
+	padding-bottom: $pad-xxl;
+	@include res(l) {
+		min-height: 240px;
+		padding-bottom: $pad-m;
+	}
+	@include res(m) {
+		min-height: initial;
+		padding-bottom: $pad-xs;
+	}
+}
+
+.cases__list {
+	display: flex;
+}
+
+.cases__list-more {
+	display: block;
+	padding: 15px $pad-xxs;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: $blue;
+	background: #e3e6e9;
+}
+
+.cases__item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	height: 380px;
+	margin-top: $pad-m;
+	margin-bottom: $pad-m;
+	padding: $pad-s $pad-s;
+	border-radius: 10px;
+	color: #fff;
+	overflow: hidden;
+	background-size: cover;
+	@include res(l) {
+		height: 325px;
+		margin-top: $pad-s;
+		margin-bottom: $pad-s;
+		padding: $pad-xs $pad-xs;
+	}
+	@include res(m) {
+		height: 240px;
+		margin-top: $pad-xs;
+		margin-bottom: $pad-xs;
+	}
+	@include res(s) {
+		margin-top: $pad-xxs;
+		margin-bottom: $pad-xxs;
+	}
+	@include res(xs) {
+		height: initial;
+		min-height: 160px;
+		padding: $pad-m 15px $pad-xs;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(transparentize(#000,1) 0%,transparentize(#000,1) 30%, #000 95%);
+		z-index: 0;
+		@include res(s) {
+			background: linear-gradient(transparentize(#000,1) 0%,transparentize(#000,1) 20%, #000 95%);
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 20px;
+		right: 25px;
+		width: 25px;
+		height: 25px;
+		background: url("../img/cases/icon-slider.png") no-repeat center;
+		@include res(s) {
+			top: 10px;
+			right: 15px;
+		}
+	}
+}
+
+.cases__item-info {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	p {
+		padding-bottom: 25px;
+		@include res(xs) {
+			padding-bottom: 15px;
+		}
+	}
+	span {
+		display: block;
+		padding-bottom: 7px;
+	}
+}

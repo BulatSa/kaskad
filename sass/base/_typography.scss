@@ -11,8 +11,9 @@ a {
 	text-decoration: none;
 }
 
-h1 {
+h1, .h1 {
 	font-size: 55px;
+	font-weight: bold;
 	line-height: (72/55);
 	@include res(xl) {
 		font-size: 46px;
@@ -25,18 +26,62 @@ h1 {
 	}
 }
 
-h2 {
+h2, .h2 {
 	font-size: 48px;
+	font-weight: bold;
 	line-height: 1.2;
 	@include res(xl) {
 		font-size: 38px;
 	}
+	@include res(l) {
+		font-size: 28px;
+	}
+	@include res(s) {
+		font-size: 20px;
+	}
 }
 
-h3 {
+h3, .h3 {
 	font-size: 24px;
+	font-weight: bold;
 	line-height: 1.2;
 	@include res(xl) {
 		font-size: 22px;
+	}
+	@include res(l) {
+		font-size: 20px;
+	}
+	@include res(m) {
+		font-size: 18px;
+	}
+}
+
+.user-content {
+	font-size: 16px;
+	line-height: (25/16);
+	@include res(s) {
+		font-size: 14px;
+	}
+}
+
+.page-title {
+	p {
+		padding-bottom: $pad-xs;
+		@include res(s) {
+			padding-bottom: $pad-xxs;
+		}
+	}
+	span {
+		display: block;
+		padding-bottom: $pad-xxs;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		@include res(s) {
+			font-size: 12px;
+		}
+	}
+	&--center {
+		text-align: center;
 	}
 }

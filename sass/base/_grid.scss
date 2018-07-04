@@ -46,19 +46,19 @@
 .row{
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -$gutter;
-	margin-right: -$gutter;
+	margin-left: (-$gutter/2);
+	margin-right: (-$gutter/2);
 	@include res(l) {
-		margin-left: -$gutter-mobile;
-		margin-right: -$gutter-mobile;
+		margin-left: (-$gutter-mobile/2);
+		margin-right: (-$gutter-mobile/2);
 	}
 
 	[class^="grid"]{
-		padding-left: $gutter;
-		padding-right: $gutter;
+		padding-left: 10px;
+		padding-right: 10px;
 		@include res(l) {
-			padding-left: $gutter-mobile;
-			padding-right: $gutter-mobile;
+			padding-left: 8px;
+			padding-right: 8px;
 		}
 	}
 
@@ -84,6 +84,43 @@
 		content: " ";
 		display: table;
 		clear: both;
+	}
+}
+
+.def-sec {
+	padding-top: $pad-l;
+	padding-bottom: $pad-l;
+	@include res(xl) {
+		padding-top: $pad-m;
+		padding-bottom: $pad-m;
+	}
+	@include res(l) {
+		padding-top: $pad-s;
+		padding-bottom: $pad-s;
+	}
+	@include res(s) {
+		padding-top: $pad-xs;
+		padding-bottom: $pad-xs;
+	}
+}
+
+.def-sec-top {
+	padding-top: $pad-l;
+	@include res(l) {
+		padding-top: $pad-m;
+	}
+	@include res(s) {
+		padding-top: $pad-xs;
+	}
+}
+
+.def-sec-bottom {
+	padding-bottom: $pad-l;
+	@include res(l) {
+		padding-bottom: $pad-m;
+	}
+	@include res(s) {
+		padding-bottom: $pad-xs;
 	}
 }
 
