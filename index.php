@@ -298,7 +298,14 @@
 			<span>пакеты дизайн-проектов</span>
 			<p class="h2">Семь раз отмерь, один раз закажи</p>
 		</div>
-		<div class="packages__input"></div>
+		<div class="packages__input-wrap">
+			<div class="packages__input">
+				<span>Введите вашу площадь, кв метры</span>
+				<input type="tel" class="not-phone" value="45">
+			</div>
+			<p>Это необходимо для расчета стоимости пакетов</p>
+		</div>
+
 		<div class="packages__window">
 			<div class="packages__nav">
 				<a href="#" data-link="base">Базовый</a>
@@ -306,8 +313,51 @@
 				<a href="#" data-link="premium">Премиум</a>
 			</div>
 			<div class="packages__list">
-				<div class="packages__item" data-link="">
+				<div class="packages__title">
+					<p class="packages__title-name">Тариф <b>Стандарт</b></p>
+					<div class="packages__title-price">
+						<span>Стоимость:</span>~<b>35 000</b><span class="rouble">c</span>
+					</div>
+				</div>
+				<div class="packages__info standart">
+					<div class="packages__info-text">
+						<p>1. Эскизный Проект</p>
+						<ul>
+							<li class="base">Выезд на обмер</li>
+							<li class="standart">План обмера с привязкой инженерных коммуникаций</li>
+							<li class="standart">Кладочный план конструкций и перегородок</li>
+							<li class="premium">План расстановки мебели с размерами <span>Премиум</span></li>
+						</ul>
 
+						<p>2. Рабочие Чертежи</p>
+						<ul>
+							<li class="base">План размещения светильников</li>
+							<li class="base">План размещения выключателей</li>
+							<li class="base">План привязки электроприводов, розеток</li>
+							<li class="standart">План размещения теплого пола и приборов отопления</li>
+							<li class="standart">План потолков с указанием конструкции, размеров и привязок</li>
+							<li class="standart">План отделки стен</li>
+							<li class="premium">План напольных покрытий с указанием типов используемых материалов <span>Премиум</span></li>
+							<li class="premium">План размещения сантехники <span>Премиум</span></li>
+						</ul>
+
+						<p>3. Концепция по дизайну</p>
+						<ul>
+							<li class="base">Художественный подбор стиля по коллажу основных помещений (не более 4-х)</li>
+							<li class="base">Эскиз геометрии основных помещений в объеме основных помещений (не более 4-х)</li>
+							<li class="base">Подбор сантехники в согласованном ценовом сегменте</li>
+							<li class="base">Подбор плитки в согласованном ценовом сегменте</li>
+							<li class="standart">Подбор дверей в согласованном ценовом сегменте</li>
+							<li class="standart">Подбор отделки лестницы в согласованном ценовом сегменте</li>
+							<li class="standart">Ведомость общих отделочных материалов (полы, потолки, стены)</li>
+							<li class="standart">Ведомость типов светильников</li>
+						</ul>
+
+						<p class="premium">4. 3D Визуализация <span>Премиум</span></p>
+					</div>
+				</div>
+				<div class="packages__img">
+					<img src="img/packages/monitor.jpg" alt="">
 				</div>
 			</div>
 		</div>

@@ -74,7 +74,7 @@ $(function () {
  Input mask BEGIN
  ***********************/
 $(function () {
-	$("input[type='tel']").mask("+7 (999) 999-99-99");
+	$("input[type='tel']:not(.not-phone)").mask("+7 (999) 999-99-99");
 });
 
 /***********************
@@ -225,4 +225,37 @@ $(function($){
 });
 /***********************
 Head Wall END
+***********************/
+
+
+/***********************
+Packages BEGIN
+***********************/
+$(function($){
+	$('.packages__input input').on('change', function(){
+		if($('.packages__nav a.active').data('link') == 'base'){
+			//console.log($(this).val())
+			$('.packages__title-price b').text(1 * $(this).val() * 1000);
+		}
+		if($('.packages__nav a.active').data('link') == 'standart'){
+			//console.log($(this).val())
+			$('.packages__title-price b').text(1 * $(this).val() * 2000);
+		}
+		if($('.packages__nav a.active').data('link') == 'premium'){
+			//console.log($(this).val())
+			$('.packages__title-price b').text(1 * $(this).val() * 2500);
+		}
+		//$('.packages__title-price b').val();
+	});
+
+	$('.packages__nav a').on('click', function (e) {
+		e.preventDefault();
+		$('.packages__nav a').removeClass('active');
+		$(this).addClass('active');
+		$('.packages__list .packages__info').removeClass('standart premium');
+		$('.packages__list .packages__info').addClass($(this).data('link'));
+	});
+});
+/***********************
+Packages END
 ***********************/
