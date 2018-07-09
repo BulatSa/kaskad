@@ -65,6 +65,9 @@ h3, .h3 {
 }
 
 .page-title {
+	position: relative;
+	max-width: 800px;
+	z-index: 1;
 	p {
 		padding-bottom: $pad-xs;
 		@include res(s) {
@@ -78,10 +81,12 @@ h3, .h3 {
 		font-weight: bold;
 		text-transform: uppercase;
 		@include res(s) {
+			padding-bottom: 5px;
 			font-size: 12px;
 		}
 	}
 	&--center {
+		margin: 0 auto;
 		text-align: center;
 	}
 }

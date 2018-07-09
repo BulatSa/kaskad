@@ -232,20 +232,21 @@ Head Wall END
 Packages BEGIN
 ***********************/
 $(function($){
-	$('.packages__input input').on('change', function(){
+	function calcPackageSum($input){
 		if($('.packages__nav a.active').data('link') == 'base'){
-			//console.log($(this).val())
-			$('.packages__title-price b').text(1 * $(this).val() * 1000);
+			$('.packages__title-price b').text(1 * $input.val() * 1000);
 		}
 		if($('.packages__nav a.active').data('link') == 'standart'){
-			//console.log($(this).val())
-			$('.packages__title-price b').text(1 * $(this).val() * 2000);
+			$('.packages__title-price b').text(1 * $input.val() * 2000);
 		}
 		if($('.packages__nav a.active').data('link') == 'premium'){
-			//console.log($(this).val())
-			$('.packages__title-price b').text(1 * $(this).val() * 2500);
+			$('.packages__title-price b').text(1 * $input.val() * 2500);
 		}
-		//$('.packages__title-price b').val();
+	}
+	calcPackageSum($('.packages__input input'));
+
+	$('.packages__input input').on('keyup', function(){
+		calcPackageSum($(this));
 	});
 
 	$('.packages__nav a').on('click', function (e) {
@@ -254,8 +255,37 @@ $(function($){
 		$(this).addClass('active');
 		$('.packages__list .packages__info').removeClass('standart premium');
 		$('.packages__list .packages__info').addClass($(this).data('link'));
+
+		$('.packages__title-name b').text($(this).text());
+		calcPackageSum($('.packages__input input'));
 	});
 });
 /***********************
 Packages END
+***********************/
+
+
+/***********************
+Flickity BEGIN
+***********************/
+$(document).ready(function() {
+	$('.service__slider').flickity({
+		// options
+		cellAlign: 'center',
+		initialIndex: 1,
+		wrapAround: true,
+		selectedAttraction: 1,
+		draggable: false,
+		friction: 1,
+		contain: true,
+		arrowShape: {
+			x0: 25,
+			x1: 55, y1: 35,
+			x2: 60, y2: 30,
+			x3: 35
+		}
+	});
+});
+/***********************
+Flickity END
 ***********************/

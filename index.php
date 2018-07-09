@@ -266,103 +266,206 @@
 	</div>
 </section>
 
-<section class="akcia-sec def-sec">
-	<div class="akcia container">
-		<div class="page-title page-title--center">
-			<span>Акции</span>
-			<p class="h2">Сделайте выгодный ремонт с нами!</p>
+<section class="rulers-wrap">
+	<section class="akcia-sec def-sec">
+		<div class="akcia container">
+			<div class="page-title page-title--center">
+				<span>Акции</span>
+				<p class="h2">Сделайте выгодный ремонт с нами!</p>
+			</div>
+			<div class="akcia__list row">
+				<div class="grid-4 grid-6_s grid-12_xs">
+					<div class="akcia__item">
+						<img src="img/akcia/item-1.jpg" alt="">
+					</div>
+				</div>
+				<div class="grid-4 grid-6_s grid-12_xs">
+					<div class="akcia__item">
+						<img src="img/akcia/item-2.jpg" alt="">
+					</div>
+				</div>
+				<div class="grid-4 grid-6_s grid-12_xs">
+					<div class="akcia__item">
+						<img src="img/akcia/item-3.jpg" alt="">
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="akcia__list row">
-			<div class="grid-4 grid-6_s grid-12_xs">
-				<div class="akcia__item">
-					<img src="img/akcia/item-1.jpg" alt="">
+	</section>
+
+	<section class="packages-sec def-sec">
+		<div class="packages container">
+			<div class="page-title page-title--center">
+				<span>пакеты дизайн-проектов</span>
+				<p class="h2">Семь раз отмерь, один раз закажи</p>
+			</div>
+			<div class="packages__input-wrap">
+				<div class="packages__input">
+					<span>Введите вашу площадь, кв метры</span>
+					<input type="tel" class="not-phone" value="45">
+				</div>
+				<p>Это необходимо для расчета стоимости пакетов</p>
+			</div>
+			<img src="img/packages/ruler-top.jpg" class="packages__ruler-top" alt="">
+			<img src="img/packages/ruler-bottom.jpg" class="packages__ruler-bottom" alt="">
+			<div class="packages__window">
+
+				<div class="packages__nav">
+					<a href="#" data-link="base">Базовый</a>
+					<a href="#" class="active" data-link="standart">Стандарт</a>
+					<a href="#" data-link="premium">Премиум</a>
+				</div>
+				<div class="packages__list">
+					<div class="packages__title">
+						<p class="packages__title-name">Тариф <b>Стандарт</b></p>
+						<div class="packages__title-price">
+							<span>Стоимость:</span>~<b>35 000</b><span class="rouble">c</span>
+						</div>
+					</div>
+					<div class="packages__info standart">
+						<div class="packages__info-text">
+							<p>1. Эскизный Проект</p>
+							<ul>
+								<li class="base">Выезд на обмер</li>
+								<li class="standart">План обмера с привязкой инженерных коммуникаций</li>
+								<li class="standart">Кладочный план конструкций и перегородок</li>
+								<li class="premium">План расстановки мебели с размерами <span>Премиум</span></li>
+							</ul>
+
+							<p>2. Рабочие Чертежи</p>
+							<ul>
+								<li class="base">План размещения светильников</li>
+								<li class="base">План размещения выключателей</li>
+								<li class="base">План привязки электроприводов, розеток</li>
+								<li class="standart">План размещения теплого пола и приборов отопления</li>
+								<li class="standart">План потолков с указанием конструкции, размеров и привязок</li>
+								<li class="standart">План отделки стен</li>
+								<li class="premium">План напольных покрытий с указанием типов используемых материалов <span>Премиум</span></li>
+								<li class="premium">План размещения сантехники <span>Премиум</span></li>
+							</ul>
+
+							<p>3. Концепция по дизайну</p>
+							<ul>
+								<li class="base">Художественный подбор стиля по коллажу основных помещений (не более 4-х)</li>
+								<li class="base">Эскиз геометрии основных помещений в объеме основных помещений (не более 4-х)</li>
+								<li class="base">Подбор сантехники в согласованном ценовом сегменте</li>
+								<li class="base">Подбор плитки в согласованном ценовом сегменте</li>
+								<li class="standart">Подбор дверей в согласованном ценовом сегменте</li>
+								<li class="standart">Подбор отделки лестницы в согласованном ценовом сегменте</li>
+								<li class="standart">Ведомость общих отделочных материалов (полы, потолки, стены)</li>
+								<li class="standart">Ведомость типов светильников</li>
+							</ul>
+
+							<p class="premium">4. 3D Визуализация <span>Премиум</span></p>
+						</div>
+					</div>
+					<div class="packages__img">
+						<img src="img/packages/monitor.jpg" alt="">
+					</div>
 				</div>
 			</div>
-			<div class="grid-4 grid-6_s grid-12_xs">
-				<div class="akcia__item">
-					<img src="img/akcia/item-2.jpg" alt="">
-				</div>
-			</div>
-			<div class="grid-4 grid-6_s grid-12_xs">
-				<div class="akcia__item">
-					<img src="img/akcia/item-3.jpg" alt="">
-				</div>
-			</div>
+
+		</div>
+	</section>
+</section>
+
+
+<section class="raschet-sec def-sec">
+	<div class="raschet container">
+		<img class="raschet__glass" src="img/raschet/glasses.jpg" alt="">
+		<img class="raschet__book" src="img/raschet/book.png" alt="">
+		<div class="raschet__info">
+			<p class="h2">Получите бесплатный расчет и новые идеи из нашего каталога</p>
+			<a href="#" class="btn fancy-modal" data-src="#modal-order">Оставить заявку</a>
 		</div>
 	</div>
 </section>
 
-<section class="packages-sec def-sec">
-	<div class="packages container">
-		<div class="page-title page-title--center">
-			<span>пакеты дизайн-проектов</span>
-			<p class="h2">Семь раз отмерь, один раз закажи</p>
-		</div>
-		<div class="packages__input-wrap">
-			<div class="packages__input">
-				<span>Введите вашу площадь, кв метры</span>
-				<input type="tel" class="not-phone" value="45">
-			</div>
-			<p>Это необходимо для расчета стоимости пакетов</p>
-		</div>
-
-		<div class="packages__window">
-			<div class="packages__nav">
-				<a href="#" data-link="base">Базовый</a>
-				<a href="#" class="active" data-link="standart">Стандарт</a>
-				<a href="#" data-link="premium">Премиум</a>
-			</div>
-			<div class="packages__list">
-				<div class="packages__title">
-					<p class="packages__title-name">Тариф <b>Стандарт</b></p>
-					<div class="packages__title-price">
-						<span>Стоимость:</span>~<b>35 000</b><span class="rouble">c</span>
+<section class="price-service">
+	<section class="price-list-sec">
+		<div class="price-list container">
+			<div class="price-list__info">
+				<div class="page-title">
+					<span>Прайс-лист</span>
+					<p class="h2">Сделайте ремонт с нами</p>
+				</div>
+				<div class="price-list__table">
+					<div class="price-list__row">
+						<div class="price-list__name">
+							<p class="h3">Монтаж перегородок из ПГП</p>
+							<span>Здесь можно описать в одно предложение, что будет реализовано, чтобы не было недопонимания.</span>
+						</div>
+						<div class="price-list__old">
+							<p class="h3">560<span class="rouble">c</span></p>
+							<span>за кв. метр</span>
+						</div>
+						<div class="price-list__new">
+							<p class="h3">420<span class="rouble">c</span></p>
+							<span>за кв. метр</span>
+						</div>
+					</div>
+					<div class="price-list__row">
+						<div class="price-list__name">
+							<p class="h3">Облицовке плиткой стены</p>
+							<span>Прямая раскладка. Здесь так же идет краткое описание услуги.</span>
+						</div>
+						<div class="price-list__old">
+							<p class="h3">1550<span class="rouble">c</span></p>
+							<span>за кв. метр</span>
+						</div>
+						<div class="price-list__new">
+							<p class="h3">1100<span class="rouble">c</span></p>
+							<span>за кв. метр</span>
+						</div>
+					</div>
+					<div class="price-list__row">
+						<div class="price-list__name">
+							<p class="h3">Устройство коробов по металлокаркасу</p>
+							<span>С обшивкой ГКЛВ в один слой, включая расшивку и разделку швов.</span>
+						</div>
+						<div class="price-list__old">
+							<p class="h3">1250<span class="rouble">c</span></p>
+							<span>за кв. метр</span>
+						</div>
+						<div class="price-list__new">
+							<p class="h3">650<span class="rouble">c</span></p>
+							<span>за кв. метр</span>
+						</div>
 					</div>
 				</div>
-				<div class="packages__info standart">
-					<div class="packages__info-text">
-						<p>1. Эскизный Проект</p>
-						<ul>
-							<li class="base">Выезд на обмер</li>
-							<li class="standart">План обмера с привязкой инженерных коммуникаций</li>
-							<li class="standart">Кладочный план конструкций и перегородок</li>
-							<li class="premium">План расстановки мебели с размерами <span>Премиум</span></li>
-						</ul>
-
-						<p>2. Рабочие Чертежи</p>
-						<ul>
-							<li class="base">План размещения светильников</li>
-							<li class="base">План размещения выключателей</li>
-							<li class="base">План привязки электроприводов, розеток</li>
-							<li class="standart">План размещения теплого пола и приборов отопления</li>
-							<li class="standart">План потолков с указанием конструкции, размеров и привязок</li>
-							<li class="standart">План отделки стен</li>
-							<li class="premium">План напольных покрытий с указанием типов используемых материалов <span>Премиум</span></li>
-							<li class="premium">План размещения сантехники <span>Премиум</span></li>
-						</ul>
-
-						<p>3. Концепция по дизайну</p>
-						<ul>
-							<li class="base">Художественный подбор стиля по коллажу основных помещений (не более 4-х)</li>
-							<li class="base">Эскиз геометрии основных помещений в объеме основных помещений (не более 4-х)</li>
-							<li class="base">Подбор сантехники в согласованном ценовом сегменте</li>
-							<li class="base">Подбор плитки в согласованном ценовом сегменте</li>
-							<li class="standart">Подбор дверей в согласованном ценовом сегменте</li>
-							<li class="standart">Подбор отделки лестницы в согласованном ценовом сегменте</li>
-							<li class="standart">Ведомость общих отделочных материалов (полы, потолки, стены)</li>
-							<li class="standart">Ведомость типов светильников</li>
-						</ul>
-
-						<p class="premium">4. 3D Визуализация <span>Премиум</span></p>
-					</div>
+				<div class="price-list__btns">
+					<a href="#" class="btn fancy-modal" data-src="modal-price">Скачать прайс-лист</a>
+					<span>Актуальный прайс-лист</span>
 				</div>
-				<div class="packages__img">
-					<img src="img/packages/monitor.jpg" alt="">
+			</div>
+			<img src="img/price-list/price.jpg" class="price-list__img" alt="">
+		</div>
+	</section>
+
+
+	<section class="service-sec def-sec-top">
+		<div class="service container">
+			<div class="page-title page-title--center">
+				<span>услуги</span>
+				<p class="h2">Узнайте почему<br>95%&nbsp;клиентов нас рекомендую</p>
+			</div>
+			<div class="service__slider">
+				<div class="service__slide">
+					<img src="img/service/review-1.jpg" alt="">
+				</div>
+				<div class="service__slide">
+					<img src="img/service/review-1.jpg" alt="">
+				</div>
+				<div class="service__slide">
+					<img src="img/service/review-1.jpg" alt="">
+				</div>
+				<div class="service__slide">
+					<img src="img/service/review-1.jpg" alt="">
 				</div>
 			</div>
 		</div>
-
-	</div>
+	</section>
 </section>
+
 
 <?php include('footer.php'); ?>

@@ -1,16 +1,26 @@
+.rulers-wrap {
+	overflow: hidden;
+}
+
 .packages-sec {
 	background: #f5f5f5;
+	z-index: 1;
 }
 
 .packages {}
 
 .packages__input-wrap {
+	position: relative;
 	padding-top: 5px;
 	text-align: center;
+	z-index: 1;
 	p {
 		margin-top: 5px;
 		font-size: 14px;
 		color: #73848f;
+		@include res(s) {
+			font-size: 12px;
+		}
 	}
 }
 
@@ -20,14 +30,20 @@
 		position: absolute;
 		top: 8px;
 		left: 50%;
+		width: 100%;
 		font-size: 12px;
 		font-weight: bold;
 		text-transform: uppercase;
 		color: #73848f;
 		transform: translate3d(-50%,0,0);
 		pointer-events: none;
+		@include res(s) {
+			top: 10px;
+			font-size: 10px;
+		}
 	}
 	input {
+		width: 100%;
 		max-width: 360px;
 		padding-top: $pad-xs;
 		padding-bottom: 5px;
@@ -39,27 +55,62 @@
 		text-align: center;
 		color: $blue;
 		background: #fff;
+		transition: all 0.3s ease;
 		outline: none;
+		@include res(s) {
+			padding-top: $pad-xs;
+			font-size: 26px;
+		}
 		&::placeholder {
 			font-size: 36px;
 			color: $blue;
 			opacity: 1;
 			transition: all 0.3s ease;
 		}
+		&:hover, &:focus {
+			border-color: $blue;
+		}
 	}
 }
 
 .packages__window {
+	position: relative;
 	margin-top: $pad-s;
 	border-radius: 20px;
 	box-shadow: 0 3px 30px 0 transparentize(#7f8287,0.7);
 	overflow: hidden;
+	z-index: 1;
+	@include res(s) {
+		margin-top: $pad-xs;
+	}
+}
+
+.packages__ruler-top {
+	position: absolute;
+	top: -120px;
+	right: -350px;
+	z-index: 0;
+}
+
+.packages__ruler-bottom {
+	position: absolute;
+	bottom: 230px;
+	left: -350px;
+	z-index: 0;
 }
 
 .packages__nav {
+	position: relative;
 	padding: $pad-m $pad-m;
 	text-align: center;
 	background: #73848f;
+	z-index: 1;
+	@include res(xl) {
+		padding: $pad-s $pad-s;
+	}
+	@include res(s) {
+		padding: $pad-xs 15px $pad-xxs;
+	}
 	a {
 		display: inline-block;
 		margin-left: 10px;
@@ -71,18 +122,49 @@
 		color: #000;
 		background: #fff;
 		transition: all 0.3s ease;
+		@include res(s) {
+			margin-left: 5px;
+			margin-right: 5px;
+			margin-bottom: $pad-xxs;
+			padding: $pad-xxs $pad-xs;
+			font-size: 14px;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
 		&.active {
 			color: #fff;
 			background: $blue;
+			&:hover {
+				color: #fff;
+			}
+		}
+		&:hover {
+			color: $blue;
 		}
 	}
 }
 
 .packages__list {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	padding-bottom: $pad-xxl;
 	background: #fff;
+	z-index: 1;
+	@include res(xl) {
+		padding-bottom: $pad-l;
+	}
+	@include res(l) {
+		padding-bottom: $pad-m;
+	}
+	@include res(s) {
+		padding-bottom: $pad-xs;
+	}
 }
 
 .packages__title {
@@ -91,10 +173,22 @@
 	justify-content: space-between;
 	width: 100%;
 	padding: $pad-m $pad-xxl;
+	@include res(l) {
+		padding: $pad-m $pad-m;
+	}
+	@include res(s) {
+		padding: $pad-xs 15px;
+	}
 }
 
 .packages__title-name {
 	font-size: 36px;
+	@include res(l) {
+		font-size: 30px;
+	}
+	@include res(s) {
+		font-size: 20px;
+	}
 }
 
 .packages__title-price {
@@ -103,6 +197,16 @@
 	font-size: 30px;
 	font-weight: bold;
 	background: #f2f4f6;
+	@include res(l) {
+		font-size: 22px;
+	}
+	@include res(s) {
+		max-width: 55%;
+		margin-left: $pad-xxs;
+		padding: $pad-xxs 15px;
+		text-align: center;
+		font-size: 20px;
+	}
 	span {
 		position: relative;
 		top: -4px;
@@ -111,6 +215,10 @@
 		font-size: 18px;
 		font-weight: normal;
 		color: #73848f;
+		@include res(s) {
+			font-size: 16px;
+			padding-right: 0;
+		}
 	}
 	b {
 		color: #000;
@@ -122,6 +230,9 @@
 		color: #000;
 		font-size: 20px;
 		font-weight: normal;
+		@include res(s) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -129,12 +240,24 @@
 	width: 47%;
 	padding-left: $pad-xxl;
 	padding-right: $pad-xs;
+	@include res(l) {
+		width: 60%;
+		padding-left: $pad-m;
+	}
+	@include res(s) {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	p {
 		padding-top: $pad-xs;
 		font-size: 16px;
 		text-transform: uppercase;
 		font-weight: bold;
 		transition: all 0.3s ease;
+		@include res(s) {
+			font-size: 14px;
+		}
 		&:first-child {
 			padding-top: 0;
 		}
@@ -201,6 +324,9 @@
 			border-radius: 10px;
 			background: #c4c4c4;
 			transition: all 0.3s ease;
+			@include res(s) {
+				padding: 1px $pad-xxs 2px;
+			}
 		}
 	}
 	&.base {
@@ -277,6 +403,12 @@
 .packages__img {
 	width: 53%;
 	padding-top: $pad-m;
+	@include res(l) {
+		width: 40%;
+	}
+	@include res(s) {
+		display: none;
+	}
 	img {
 		display: block;
 		max-width: 100%;

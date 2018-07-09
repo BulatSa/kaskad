@@ -1,5 +1,7 @@
 .akcia-sec {
+	position: relative;
 	background: #f5f5f5;
+	z-index: 2;
 }
 
 .akcia {}
@@ -8,6 +10,13 @@
 	padding-top: $pad-xs;
 	@include res(s) {
 		padding-top: $pad-xxs;
+	}
+	div {
+		&:last-child {
+			.akcia__item {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 

@@ -1,0 +1,116 @@
+.service-sec {
+	position: relative;
+	margin-top: -200px;
+	//background: #26252d;
+	z-index: 0;
+	@include res(m) {
+		margin-top: 0;
+	}
+}
+
+.service {
+	color: #fff;
+}
+
+.service__slider {
+	padding-left: $pad-l;
+	padding-right: $pad-l;
+	padding-top: 130px;
+	background: url('../img/service/phone.png') no-repeat center bottom;
+	@include res(l) {
+		padding-top: 100px;
+	}
+	@include res(s) {
+		padding-left: $pad-xs;
+		padding-right: $pad-xs;
+		padding-top: 10px;
+		background: none;
+	}
+	.flickity-button {
+		background: #565466;
+		opacity: 0.7;
+		transition: all 0.3s ease;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flickity-button-icon {
+		 fill: #0598f7;
+	}
+	.flickity-prev-next-button.previous {
+		@include res(s) {
+			left: 0;
+		}
+	}
+	.flickity-prev-next-button.next {
+		@include res(s) {
+			right: 0;
+		}
+	}
+}
+
+.service__slide {
+	position: relative;
+	width: 33.33333%;
+	height: 500px;
+	margin-left: 10px;
+	margin-right: 10px;
+	opacity: 0.4;
+	transform: translate3d(0,0,0) scale(0.85);
+	@include res(l) {
+		transform: translate3d(0,0,0) scale(0.7);
+	}
+	@include res(m) {
+		width: 100%;
+	}
+	@include res(s) {
+		max-width: 340px;
+		height: initial;
+		padding-top: 33px;
+		border: 5px solid #000;
+		border-bottom: none;
+		border-radius: 40px 40px 0 0;
+		background: #fff;
+		transform: translate3d(0,0,0) scale(1);
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: -39px;
+		left: 50%;
+		max-width: 328px;
+		width: 100%;
+		height: 40px;
+		border-radius: 40px 40px 0 0;
+		background: #fff;
+		transform: translate3d(-50%,0,0);
+		@include res(s) {
+			content: none;
+		}
+	}
+	img {
+		position: relative;
+		display: block;
+		max-width: 328px;
+		width: 100%;
+		margin: 0 auto;
+		transform: translate3d(0,0,0);
+		z-index: 1;
+	}
+	&.is-selected {
+		opacity: 1;
+		transform: translate3d(0,0,0) scale(1);
+		z-index: 5;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 250%;
+			height: 500px;
+			transform: translate3d(-50%,0,0);
+			background: radial-gradient(ellipse at center, #6f6d84 0%, transparentize(#6f6d84,1) 70%);
+			z-index: 0;
+		}
+	}
+}

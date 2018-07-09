@@ -3,6 +3,7 @@
 @import 'base/placeholders';
 
 @import 'vendors/fancybox';
+@import 'vendors/flickity.min';
 @import 'vendors/hamburgers/hamburgers';
 
 @import 'base/reset';
@@ -20,5 +21,8 @@
 @import 'modules/cases';
 @import 'modules/akcia';
 @import 'modules/packages';
+@import 'modules/raschet';
+@import 'modules/price-list';
+@import 'modules/service';
 
 @import 'pages/home';
