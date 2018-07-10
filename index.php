@@ -468,4 +468,55 @@
 </section>
 
 
+<section class="benefits-sec def-sec">
+	<div class="benefits container">
+		<div class="page-title page-title--center">
+			<span>Преимущества</span>
+			<p class="h2">Оцените наш подход к дизайну интерьеров</p>
+			<div class="page-title__descr">
+				Наша компания занимается дизайн-проектированием и отделкой жилых помещений в Москве и Московской области. К нам обращаются за индивидуальными решениями и безупречным качеством работ.
+			</div>
+		</div>
+		<div class="benefits__list row">
+			<div class="grid-6 grid-12_xs benefits__item">
+				<div class="benefits__item-img">
+					<img src="img/benefits/benefit-1.jpg" alt="">
+				</div>
+				<div class="benefits__item-text">
+					<p class="h3">Полное соответствие технологиям</p>
+					<span>Используем только современные и эффективные технологические решения для интерьера вашей мечты.</span>
+				</div>
+			</div>
+			<div class="grid-6 grid-12_xs benefits__item">
+				<div class="benefits__item-img">
+					<img src="img/benefits/benefit-2.jpg" alt="">
+				</div>
+				<div class="benefits__item-text">
+					<p class="h3">Обязательный контроль качества</p>
+					<span>Контролируем процесс на всех этапах работы над проектов. Следим за соблюдением строительных и санитарных норм, предъявляемых к жилым помещениям.</span>
+				</div>
+			</div>
+			<div class="grid-6 grid-12_xs benefits__item">
+				<div class="benefits__item-img">
+					<img src="img/benefits/benefit-3.jpg" alt="">
+				</div>
+				<div class="benefits__item-text">
+					<p class="h3">Индивидуальный подход</p>
+					<span>Мы разрабатываем индивидуальный интерьер с учетом всех пожеланий наших клиентов. Помогаем подобрать к нему подходящие отделочные материалы, мебель и освещение.</span>
+				</div>
+			</div>
+			<div class="grid-6 grid-12_xs benefits__item">
+				<div class="benefits__item-img">
+					<img src="img/benefits/benefit-4.jpg" alt="">
+				</div>
+				<div class="benefits__item-text">
+					<p class="h3">Строгое соблюдение сроков</p>
+					<span>Мы всегда точно рассчитываем время, необходимое для успешной реализации вашего проекта, и тщательно следим за тем, чтобы все работы были завершены в срок.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 <?php include('footer.php'); ?>

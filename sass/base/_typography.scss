@@ -88,6 +88,18 @@ h3, .h3 {
 	&--center {
 		margin: 0 auto;
 		text-align: center;
+		.page-title__descr {
+			margin: 0 auto;
+		}
+	}
+}
+
+.page-title__descr {
+	max-width: 520px;
+	font-size: 14px;
+	line-height: (20/14);
+	@include res(s) {
+		font-size: 12px;
 	}
 }
 

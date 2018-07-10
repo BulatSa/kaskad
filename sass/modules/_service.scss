@@ -13,12 +13,14 @@
 }
 
 .service__slider {
+	margin-top: $pad-s;
 	padding-left: $pad-l;
 	padding-right: $pad-l;
-	padding-top: 130px;
+	padding-top: $pad-xxl;
+	padding-bottom: 0;
 	background: url('../img/service/phone.png') no-repeat center bottom;
 	@include res(l) {
-		padding-top: 100px;
+		//padding-top: 100px;
 	}
 	@include res(s) {
 		padding-left: $pad-xs;
@@ -107,7 +109,7 @@
 			top: 0;
 			left: 50%;
 			width: 250%;
-			height: 500px;
+			height: 480px;
 			transform: translate3d(-50%,0,0);
 			background: radial-gradient(ellipse at center, #6f6d84 0%, transparentize(#6f6d84,1) 70%);
 			z-index: 0;

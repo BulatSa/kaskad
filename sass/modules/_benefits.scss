@@ -1,0 +1,56 @@
+.benefits-sec {
+	background: #f2f4f6;
+}
+
+.benefits {}
+
+.benefits__list {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding-top: $pad-s;
+}
+
+.benefits__item {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	//width: 50%;
+	padding-bottom: $pad-s;
+}
+
+.benefits__item-img {
+	max-width: 200px;
+	width: 35%;
+	@include res(m) {
+		width: 100%;
+	}
+	@include res(s) {
+		width: 35%;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.benefits__item-text {
+	width: 65%;
+	padding-left: $pad-xxs;
+	padding-right: $pad-xxs;
+	padding-top: $pad-s;
+	@include res(m) {
+		width: 100%;
+	}
+	@include res(s) {
+		width: 65%;
+		padding-right: 0;
+	}
+	span {
+		display: block;
+		padding-top: $pad-xxs;
+		font-size: 14px;
+		line-height: (20/14);
+	}
+}
