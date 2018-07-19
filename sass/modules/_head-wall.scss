@@ -5,6 +5,10 @@
 	width: 100%;
 	overflow: hidden;
 	transform: translate3d(-50%,0,0);
+	background: #000;
+	@include res(xl) {
+		top: 40px;
+	}
 }
 
 .head-wall {
@@ -23,7 +27,7 @@
 		width: 100%;
 		height: 100%;
 		opacity: 1;
-		background: transparentize(#000,0.6);
+		background: transparentize(#000,0.35);
 		transition: all 1s ease;
 		z-index: 1;
 	}

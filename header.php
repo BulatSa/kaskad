@@ -15,21 +15,20 @@
 	<title>Каскад</title>
 
 	<!-- favocons -->
-	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-	<link rel="manifest" href="favicons/manifest.json">
-	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="favicons/favicon.ico">
-	<meta name="msapplication-config" content="favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+	<link rel="manifest" href="favicons/site.webmanifest">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#654dae">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#654dae">
 	<!-- favocons -->
 
 	<!-- og -->
-	<meta property="og:title" content="Шаблон проекта">
-	<meta property="og:description" content="Описание проекта">
+	<meta property="og:title" content="Design Service">
+	<meta property="og:description" content="Дизайн-проектирование и отделочные работы вашей квартиры">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="/img/og.jpg">
+	<meta property="og:image" content="http://demo.penbrain.ru/kaskad/img/og.jpg">
 	<!-- og -->
 
 	<link href="css/main.css" rel="stylesheet">
@@ -71,7 +70,7 @@
 	</div>
 </div>
 
-<section class="top-menu-sec">
+<section class="top-menu-sec compensate-for-scrollbar">
 	<div class="top-menu container">
 		<div class="top-menu__burger">
 			<button class="hamburger hamburger--spin" type="button">
@@ -87,25 +86,25 @@
 		<nav class="top-menu__nav">
 			<ul>
 				<li>
-					<a href="#" class="scrollto">проекты</a>
-				</li>
-				<li>
-					<a href="#" class="scrollto">Услуги</a>
-				</li>
-				<li>
-					<a href="#" class="scrollto">цены</a>
+					<a href="#cases" class="scrollto">проекты</a>
 				</li>
 				<li class="red-promo">
-					<a href="#" class="scrollto">акции</a>
+					<a href="#akcia" class="scrollto">акции</a>
 				</li>
 				<li>
-					<a href="#" class="scrollto">о нас</a>
+					<a href="#packages" class="scrollto">Услуги</a>
 				</li>
 				<li>
-					<a href="#" class="scrollto">отзывы</a>
+					<a href="#prices" class="scrollto">цены</a>
 				</li>
 				<li>
-					<a href="#" class="scrollto">контакты</a>
+					<a href="#services" class="scrollto">отзывы</a>
+				</li>
+				<li>
+					<a href="#about" class="scrollto">о нас</a>
+				</li>
+				<li>
+					<a href="#contact" class="scrollto">контакты</a>
 				</li>
 			</ul>
 		</nav>

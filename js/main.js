@@ -89,18 +89,57 @@ function init_fancy() {
 	$().fancybox({
 		selector: '.fancy',
 		buttons: ['close'],
-		backFocus: false
+		backFocus: false,
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE       : 'Закрыть',
+				NEXT        : 'Дальше',
+				PREV        : 'Назад',
+				ERROR       : 'Не удается загрузить. <br/> Попробуйте позднее.',
+				PLAY_START  : 'Начать слайдшоу',
+				PLAY_STOP   : 'Остановить слайдшоу',
+				FULL_SCREEN : 'На весь экран',
+				THUMBS      : 'Превью'
+			}
+		}
 	});
 	$().fancybox({
 		selector: '.fancy-modal',
 		backFocus: false,
-		touch: false
+		touch: false,
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE       : 'Закрыть',
+				NEXT        : 'Дальше',
+				PREV        : 'Назад',
+				ERROR       : 'Не удается загрузить. <br/> Попробуйте позднее.',
+				PLAY_START  : 'Начать слайдшоу',
+				PLAY_STOP   : 'Остановить слайдшоу',
+				FULL_SCREEN : 'На весь экран',
+				THUMBS      : 'Превью'
+			}
+		}
 	});
 	$().fancybox({
 		selector: '.fancy-map',
 		toolbar: false,
 		smallBtn: true,
-		backFocus: false
+		backFocus: false,
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE       : 'Закрыть',
+				NEXT        : 'Дальше',
+				PREV        : 'Назад',
+				ERROR       : 'Не удается загрузить. <br/> Попробуйте позднее.',
+				PLAY_START  : 'Начать слайдшоу',
+				PLAY_STOP   : 'Остановить слайдшоу',
+				FULL_SCREEN : 'На весь экран',
+				THUMBS      : 'Превью'
+			}
+		}
 	});
 }
 
@@ -133,7 +172,7 @@ $(function () {
 $(function () {
 	$('.scrollto').on('click', function () {
 		var elementClick = $(this).attr("href");
-		var destination = $(elementClick).offset().top;
+		var destination = $(elementClick).offset().top - 30;
 		$('html,body').stop().animate({scrollTop: destination}, 1000);
 		return false;
 	});
@@ -285,7 +324,86 @@ $(document).ready(function() {
 			x3: 35
 		}
 	});
+
+	$('.about__slider').flickity({
+		// options
+		cellAlign: 'center',
+		adaptiveHeight: true,
+		pageDots: false,
+		prevNextButtons: false,
+		wrapAround: true,
+		contain: true,
+		arrowShape: {
+			x0: 25,
+			x1: 55, y1: 35,
+			x2: 60, y2: 30,
+			x3: 35
+		}
+	});
+	$('.about__slider-nav .next').on( 'click', function() {
+		$('.about__slider').flickity('next');
+	});
+	$('.about__slider-nav .previous').on( 'click', function() {
+		$('.about__slider').flickity('previous');
+	});
 });
 /***********************
 Flickity END
 ***********************/
+
+
+
+/***********************
+ Faq BEGIN
+ ***********************/
+$(document).ready(function() {
+	if($('.faq__item-title').length) {
+		$('.faq__item-answer').slideUp();
+		$('.faq__item.open').find('.faq__item-answer').slideToggle();
+		$('.faq__item-title').on('click', function(){
+			var $this = $(this);
+			var $faqList = $this.parents('.faq__list');
+			var $otherItems = $faqList.find('.faq__item-title').not($this).closest('.faq__item');
+
+			$otherItems.removeClass('open');
+			$otherItems.find('.faq__item-answer').slideUp();
+
+			$this.next('.faq__item-answer').slideToggle();
+			$this.closest('.faq__item').toggleClass('open');
+		});
+	}
+});
+/***********************
+ Faq END
+ ***********************/
+
+
+/***********************
+ Link anchors BEGIN
+ ***********************/
+$(function($){
+
+	$('.top-menu__nav a').each(function () {
+		var target = $(this).attr('href');
+		$(target).addClass('__nav-section');
+	});
+
+	$(window).scroll(function() {
+		var w_scroll = $(window).scrollTop();
+		var w_height = $(window).height();
+		$('.top-menu__nav li').removeClass('active');
+		$('.__nav-section').each(function() {
+			var section_top = $(this).offset().top;
+			var section_h = $(this).outerHeight();
+
+			if ((w_scroll >= section_top-w_height/2) && (w_scroll < section_top + section_h-80)){
+				var section_index = $(this).index('.__nav-section');
+				$('.top-menu__nav li').eq(section_index).addClass('active');
+			}
+		});
+	});
+
+});
+/***********************
+ Link anchors END
+ ***********************/

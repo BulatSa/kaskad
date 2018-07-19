@@ -1,0 +1,155 @@
+.about-sec {
+	background: #f2f4f6;
+}
+
+.about {
+	padding-top: $pad-l;
+	@include res(m) {
+		padding-top: $pad-xxs;
+	}
+}
+
+.about__info {
+	.page-title {
+		padding-right: $pad-xs;
+		@include res(m) {
+			padding-right: 0;
+		}
+	}
+}
+
+.about__slider {
+	@include res(m) {
+		padding-top: $pad-xs;
+	}
+	@include res(xs) {
+		padding-top: 0;
+	}
+}
+
+.about__slider-nav {
+	position: relative;
+	width: 53%;
+	margin-top: -20px;
+	margin-left: auto;
+	@include res(m) {
+		width: 60%;
+	}
+	@include res(xs) {
+		width: 100%;
+	}
+	.flickity-prev-next-button {
+		transition: all 0.3s ease;
+		box-shadow: none;
+		background: #d2d8df;
+		outline: none;
+		path {
+			transition: all 0.3s ease;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:active {
+			opacity: 1;
+		}
+		&:hover {
+			background: #fff;
+			path {
+				fill: $blue;
+			}
+		}
+	}
+	.previous {
+		left: 40px;
+		@include res(xs) {
+			left: 0px;
+		}
+	}
+	.next {
+		left: 95px;
+		@include res(xs) {
+			left: 55px;
+		}
+	}
+}
+
+.about__slide {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	padding-left: 10px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	@include res(xs) {
+		flex-wrap: wrap;
+		padding-left: 0;
+		overflow: hidden;
+	}
+}
+
+.about__slide-img {
+	width: 47%;
+	@include res(m) {
+		width: 40%;
+	}
+	@include res(xs) {
+		width: 100%;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		box-shadow: 4px 4px 20px 0 transparentize(#000, 0.7);
+		@include res(xs) {
+			max-width: 220px;
+			box-shadow: 5px 5px 10px 0 transparentize(#000, 0.7);
+		}
+	}
+}
+
+.about__slide-info {
+	width: 53%;
+	padding-left: $pad-s;
+	padding-right: $pad-xs;
+	padding-bottom: $pad-m;
+	@include res(m) {
+		width: 60%;
+	}
+	@include res(xs) {
+		width: 100%;
+		padding-top: $pad-xs;
+		padding-left: 0;
+	}
+	b {
+		display: block;
+		padding-bottom: $pad-xxs;
+		font-size: 14px;
+	}
+	span {
+		display: block;
+		padding-bottom: $pad-xxs;
+		font-weight: bold;
+	}
+	p {
+		font-size: 14px;
+		color: #73848f;
+	}
+}
+
+.about__team {
+	padding-top: 120px;
+	@include res(l) {
+		padding-top: 100px;
+	}
+	@include res(m) {
+		padding-top: 80px;
+	}
+	@include res(xs) {
+		padding-top: 60px;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		transform: translate3d(0,0,0);
+	}
+}

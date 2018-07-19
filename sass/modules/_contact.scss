@@ -1,0 +1,126 @@
+.contact-wrap {
+	position: relative;
+	margin-top: -$pad-s;
+	background: url('../img/contact/bg-contact.jpg') no-repeat top center, #f2f4f6;
+	z-index: 1;
+	@include res(m) {
+		background: #f2f4f6;
+		background-position: 50% 50%;
+	}
+}
+
+.contact-sec {
+	position: relative;
+	//background: #f2f4f6;
+}
+
+.contact {
+	padding-top: $pad-xxl;
+}
+
+.contact__info {}
+
+.contact__info-about-list {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding-top: $pad-s;
+}
+
+.contact__info-about {
+	width: 50%;
+	padding-right: $pad-xs;
+	padding-bottom: $pad-s;
+	@include res(xs) {
+		width: 100%;
+		padding-right: 0;
+		padding-bottom: $pad-xs;
+	}
+	p {
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		@include res(s) {
+			font-size: 12px;
+		}
+	}
+	span {
+		font-size: 14px;
+	}
+}
+
+.contact__info-about-soc {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-top: 5px;
+	margin-right: 5px;
+	border-radius: 50%;
+	color: #fff;
+	text-align: center;
+	box-shadow: 0 0 10px 0 transparentize($blue,1);
+	background: #3478d4;
+	transition: all 0.3s ease;
+	&:hover {
+		box-shadow: 0 0 10px 0 #3478d4;
+	}
+	i {
+		line-height: 40px;
+	}
+}
+
+.contact__map {
+	@include res(s) {
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
+	a {
+		position: relative;
+		display: block;
+		width: 112px;
+		height: 161px;
+		margin: 220px auto 0;
+		text-align: center;
+		@include res(l) {
+			margin: 200px 30% 0 auto;
+		}
+		@include res(m) {
+			margin: -290px auto 0;
+		}
+		@include res(s) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		span {
+			position: absolute;
+			top: 35px;
+			left: 0;
+			font-size: 16px;
+			color: #fff;
+			transition: all 0.3s ease;
+			@include res(s) {
+				top: 30px;
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 14px;
+			}
+		}
+		img {
+			@include res(s) {
+				max-width: 100%;
+			}
+		}
+		b {
+			border-bottom: 1px dashed #fff;
+		}
+	}
+}
+
+.contact__map-banka {
+	display: none;
+	@include res(m) {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}

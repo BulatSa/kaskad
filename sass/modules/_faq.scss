@@ -1,0 +1,224 @@
+.faq-sec {
+	position: relative;
+	margin-top: 300px;
+	background: #26252d;
+	z-index: 0;
+	@include res(m) {
+		margin-top: 90px;
+	}
+}
+
+.faq {
+	top: -30px;
+	@include res(m) {
+		padding-top: $pad-m;
+		top: 0;
+	}
+	.page-title {
+		color: #fff;
+	}
+}
+
+.faq__info {
+	padding-top: $pad-m;
+	color: #fff;
+	overflow: hidden;
+	@include res(m) {
+		padding-top: $pad-s;
+	}
+}
+
+.faq__list {}
+
+.faq__item {
+	margin-bottom: $pad-xxs;
+	padding-top: $pad-xs;
+	padding-left: 70px;
+	padding-right: $pad-xs;
+	padding-bottom: $pad-xs;
+	border: 1px solid #747189;
+	border-radius: 20px;
+	box-shadow: 0 3px 20px 0 #000000;
+	transition: border 0.3s ease;
+	@include res(m) {
+		padding-left: 50px;
+		padding-right: $pad-xxs;
+	}
+	@include res(s) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	&.open {
+		border-color: transparentize(#747189,1);
+		.faq__item-quest {
+			i {
+				color: $blue;
+				transform: translate3d(0,0,0) rotate(180deg);
+			}
+		}
+		.faq__item-answer {
+			display: block;
+		}
+	}
+}
+
+.faq__item-title {
+	position: relative;
+	cursor: pointer;
+	padding-right: $pad-m;
+	&:hover {
+		.faq__item-quest {
+			p,i {
+				color: $blue;
+			}
+		}
+	}
+}
+
+.faq__item-numb {
+	position: absolute;
+	top: 0;
+	left: -45px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 50%;
+	background: $blue;
+	@include res(m) {
+		left: -36px;
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		font-size: 14px;
+	}
+}
+
+.faq__item-quest {
+	position: relative;
+	transition: all 0.3s ease;
+	p {
+		font-size: 18px;
+		font-weight: bold;
+		line-height: (24/18);
+		transition: all 0.3s ease;
+		@include res(m) {
+			font-size: 16px;
+		}
+		@include res(s) {
+			font-size: 14px;
+		}
+	}
+	i {
+		position: absolute;
+		top: 5px;
+		right: -25px;
+		transition: all 0.3s ease;
+		@include res(s) {
+			top: 2px;
+		}
+	}
+}
+
+.faq__item-answer {
+	//display: none;
+	padding-top: $pad-xs;
+	padding-bottom: $pad-xs;
+	font-size: 14px;
+	line-height: (22/14);
+}
+
+.faq__form {
+	position: relative;
+	max-width: 380px;
+	margin-top: $pad-xxl;
+	margin-left: $pad-s;
+	padding: $pad-s $pad-xs;
+	border-radius: 20px;
+	background: #fff;
+	@include res(m) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include res(s) {
+		margin-top: 120px;
+		margin-bottom: $pad-xs;
+		padding: $pad-s 15px;
+	}
+	.ajax-form {
+		
+	}
+	&--modal {
+		margin: 0 auto;
+		@include res(s) {
+			padding: $pad-xs 15px $pad-s;
+		}
+		.faq__form-title {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.faq__form-img {
+	position: relative;
+	top: -63px;
+	display: block;
+	margin: -63px auto -55px;
+}
+
+.faq__form-img-descr {
+	position: absolute;
+	top: 20px;
+	right: -180px;
+	width: 170px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 12px;
+	@include res(l) {
+		position: relative;
+		top: initial;
+		right: initial;
+		margin: 0 auto 5px;
+		text-align: center;
+		color: #000;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: #009cff;
+	}
+	span {
+		display: block;
+		font-size: 16px;
+	}
+}
+
+.faq__form-title {
+	margin-bottom: 15px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 1.2;
+	color: #000;
+	@include res(s) {
+		font-size: 26px;
+	}
+}
+
+.faq__form-descr {
+	margin-bottom: 15px;
+	font-size: 16px;
+	text-align: center;
+	@include res(s) {
+		font-size: 14px;
+	}
+}

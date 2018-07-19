@@ -1,0 +1,47 @@
+.footer-sec {
+	background: url('../img/footer/bg-top.png') no-repeat center top,#26252d;
+}
+
+.footer {
+	color: #85829d;
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.footer__top {
+	font-size: 14px;
+	line-height: (20/14);
+	@include res(s) {
+		font-size: 12px;
+	}
+	img {
+		@include res(s) {
+			margin-bottom: $pad-xs;
+		}
+	}
+}
+
+.footer__top-dev {
+	text-align: right;
+	a {
+		display: inline-block;
+	}
+}
+
+.footer__bottom {
+	padding-top: $pad-s;
+	font-size: 12px;
+	text-transform: uppercase;
+	@include res(s) {
+		font-size: 11px;
+	}
+	a {
+		color: #009cff;
+	}
+	span {
+		display: inline-block;
+		padding-right: $pad-xs;
+	}
+}

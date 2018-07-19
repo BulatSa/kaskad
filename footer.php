@@ -1,21 +1,80 @@
 <!-- Модальные окна -->
 <div class="modals-sec">
 
-	<div id="modal-order" class="modal">
-		<p>Заказать обратный звонок</p>
-		<p>Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
-		<form class="ajax-form">
-			<input type="text" name="user_name" placeholder="Введите имя" data-label="Имя пользователя" class="text-input" >
-			<input type="email" name="user_email" placeholder="Введите e-mail*" data-label="Email" class="text-input" data-req="true">
-			<input type="tel" name="user_tel" placeholder="Введите телефон*" data-label="Телефон"  class="text-input" data-req="true">
-			<input type="file" name="user_file" data-label="Файл">
-			<input type="hidden" value="Новая заявка" name="form_subject">
-			<button type="submit" class="btn">Отправить</button>
-			<label class="style-checkbox">
-				<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
-				<span>Принимаю <a href="#" target="_blank">условия обработки</a> персональных данных</span>
-			</label>
-		</form>
+	<div id="modal-call" class="modal">
+		<div class="faq__form faq__form--modal">
+			<p class="faq__form-title">Заказать обратный звонок</p>
+			<p class="faq__form-descr">Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
+			<form class="ajax-form">
+				<input type="hidden" value="Обратный звонок" name="form_subject">
+				<input type="text" class="input-text" placeholder="Введите имя*" data-req="true" name="user_name" data-label="Имя">
+				<input type="tel" class="input-text" placeholder="Введите телефон*" data-req="true" name="user_tel" data-label="Телефон">
+				<label class="style-check-ios">
+					<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
+					<span>Я соглашаюсь на обработку персональных данных и с <a href="privacy.pdf" target="_blank">политикой конфиденциальности</a></span>
+				</label>
+				<div class="btn-center">
+					<button class="btn">Заказать звонок</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-cons" class="modal">
+		<div class="faq__form faq__form--modal">
+			<p class="faq__form-title">Заказать бесплатную консультацию</p>
+			<p class="faq__form-descr">Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
+			<form class="ajax-form">
+				<input type="hidden" value="Бесплатная консультация" name="form_subject">
+				<input type="text" class="input-text" placeholder="Введите имя*" data-req="true" name="user_name" data-label="Имя">
+				<input type="tel" class="input-text" placeholder="Введите телефон*" data-req="true" name="user_tel" data-label="Телефон">
+				<label class="style-check-ios">
+					<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
+					<span>Я соглашаюсь на обработку персональных данных и с <a href="privacy.pdf" target="_blank">политикой конфиденциальности</a></span>
+				</label>
+				<div class="btn-center">
+					<button class="btn">Заказать консультацию</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-rashet" class="modal">
+		<div class="faq__form faq__form--modal">
+			<p class="faq__form-title">Получить бесплатный расчет</p>
+			<p class="faq__form-descr">Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
+			<form class="ajax-form">
+				<input type="hidden" value="Бесплатный расчет" name="form_subject">
+				<input type="text" class="input-text" placeholder="Введите имя*" data-req="true" name="user_name" data-label="Имя">
+				<input type="tel" class="input-text" placeholder="Введите телефон*" data-req="true" name="user_tel" data-label="Телефон">
+				<label class="style-check-ios">
+					<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
+					<span>Я соглашаюсь на обработку персональных данных и с <a href="privacy.pdf" target="_blank">политикой конфиденциальности</a></span>
+				</label>
+				<div class="btn-center">
+					<button class="btn">Получить расчет</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-price" class="modal">
+		<div class="faq__form faq__form--modal">
+			<p class="faq__form-title">Получить прайс-лист</p>
+			<p class="faq__form-descr">Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
+			<form class="ajax-form">
+				<input type="hidden" value="Прайс-лист" name="form_subject">
+				<input type="text" class="input-text" placeholder="Введите имя*" data-req="true" name="user_name" data-label="Имя">
+				<input type="tel" class="input-text" placeholder="Введите телефон*" data-req="true" name="user_tel" data-label="Телефон">
+				<label class="style-check-ios">
+					<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
+					<span>Я соглашаюсь на обработку персональных данных и с <a href="privacy.pdf" target="_blank">политикой конфиденциальности</a></span>
+				</label>
+				<div class="btn-center">
+					<button class="btn">Получить прайс-лист</button>
+				</div>
+			</form>
+		</div>
 	</div>
 
 	<div id="modal-thanks" class="modal">

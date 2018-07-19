@@ -1,20 +1,32 @@
 label{cursor: pointer;}
 
-.text-input{
-	display: inline-block;
+.input-text, .input-textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 15px 25px;
 	font-family: $font;
 	font-size: 14px;
 	line-height: 1.3;
 	-webkit-appearance: none;
-	border: 1px solid #666;
-	padding: 5px 10px;
+	border: 1px solid #eaeaea;
+	border-radius: 30px;
 	overflow: visible;
+	@include res(l) {
+		font-size: 16px;
+	}
+	@include res(s) {
+		padding: 13px 25px;
+	}
 
 	&::placeholder {
 		font-size: 14px;
-		color: #A8A8A8;
+		color: #000;
 		opacity: 1;
 		transition: all 0.3s ease;
+		@include res(l) {
+			font-size: 16px;
+		}
 	}
 
 	&:focus{
@@ -22,6 +34,19 @@ label{cursor: pointer;}
 		&::placeholder {
 			opacity: 0;
 		}
+	}
+
+	&.error {
+		box-shadow: 0 0 2px 0 red inset;
+		border-color: red;
+	}
+}
+
+.input-textarea {
+	min-height: 180px;
+	border-radius: 20px;
+	@include res(s) {
+		min-height: 100px;
 	}
 }
 
@@ -89,3 +114,75 @@ label{cursor: pointer;}
 	}
 }
 //style-checkbox
+
+.style-check-ios {
+	position: relative;
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 12px;
+	@include res(s) {
+		font-size: 12px;
+	}
+	input {
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		&:checked {
+			&+span {
+				&:before {
+					background: $blue;
+				}
+				&:after {
+					transform: translate(20px, 0);
+				}
+			}
+		}
+		&.error {
+			&+span {
+				&:before {
+					background: #f81242;
+					box-shadow: 0 0 20px 0 rgba(255, 35, 0, 0.6);
+				}
+			}
+		}
+	}
+
+	span {
+		position: relative;
+		display: block;
+		padding-left: 50px;
+		user-select: none;
+		text-align: left;
+		color: #a8a8a8;
+		&:before {
+			content: '';
+			width: 42px;
+			height: 22px;
+			border-radius: 21px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: all 0.3s ease;
+			background: #b4b4b4;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: 2px;
+			top: 2px;
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background: #fff;
+			transition: transform 0.3s ease;
+			z-index: 2;
+		}
+	}
+
+	a {
+		color: $blue;
+	}
+}

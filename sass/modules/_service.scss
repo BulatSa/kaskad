@@ -113,6 +113,9 @@
 			transform: translate3d(-50%,0,0);
 			background: radial-gradient(ellipse at center, #6f6d84 0%, transparentize(#6f6d84,1) 70%);
 			z-index: 0;
+			@include res(l) {
+				content: none;
+			}
 		}
 	}
 }

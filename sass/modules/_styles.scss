@@ -1,0 +1,91 @@
+.styles-sec {
+	position: relative;
+	background: url('../img/styles/bg.jpg') no-repeat center top;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 50%;
+		width: 100%;
+		height: 69px;
+		background: url('../img/styles/mask-bottom.png') no-repeat center bottom;
+		background-size: contain;
+		transform: translate3d(-50%,0,0);
+		@include res(xl) {
+			height: 55px;
+		}
+		@include res(l) {
+			height: 40px;
+		}
+	}
+}
+
+.styles {
+	color: #fff;
+}
+
+.styles__info {
+	max-width: 360px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.styles__fruits {
+	display: block;
+	max-width: 100%;
+	margin: -150px auto $pad-xs;
+	@include res(l) {
+		max-width: 150px;
+		margin: -100px auto $pad-xs;
+	}
+	@include res(s) {
+		max-width: 120px;
+		margin: -90px auto $pad-xs;
+	}
+}
+
+.styles__title {
+	padding-bottom: $pad-s;
+	font-size: 48px;
+	font-weight: bold;
+	line-height: 1.2;
+	@include res(xl) {
+		font-size: 38px;
+	}
+	@include res(l) {
+		font-size: 28px;
+	}
+	@include res(s) {
+		font-size: 24px;
+		padding-bottom: $pad-xs;
+	}
+	span {
+		display: block;
+		font-style: italic;
+		font-weight: normal;
+	}
+}
+
+.styles__descr {
+	padding-bottom: $pad-s;
+	font-size: 16px;
+	@include res(s) {
+		font-size: 14px;
+	}
+}
+
+.styles__manager {
+	p {
+		font-size: 18px;
+		font-weight: bold;
+		@include res(s) {
+			font-size: 16px;
+		}
+	}
+	span {
+		font-size: 14px;
+		@include res(s) {
+			font-size: 12px;
+		}
+	}
+}
